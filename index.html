@@ -19,6 +19,7 @@
           <li><a href="#mission">Mission</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#publications">Publications</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -34,11 +35,8 @@
     </div>
   </section>
 
-    <!-- Mission Section -->
+  <!-- Mission Section -->
   <section id="mission" class="section fade-in">
-    <p>
-
-    </p>
     <h2>Mission</h2>
     <p>
       Our mission is to explore the foundations of machine intelligence and apply those insights to improve the human condition.  
@@ -48,9 +46,6 @@
 
   <!-- Projects Section -->
   <section id="projects" class="section fade-in">
-    <p>
-        
-    </p>
     <h2>Projects</h2>
     <div class="cards">
       <div class="card">
@@ -76,9 +71,6 @@
 
   <!-- Publications Section -->
   <section id="publications" class="section fade-in">
-    <p>
-        
-    </p>
     <h2>Publications</h2>
     <div class="pub-list">
       <div class="pub">
@@ -97,11 +89,27 @@
         <h4>TBD</h4>
         <p>TBD</p>
       </div>
-      
     </div>
   </section>
 
-  
+  <!-- Contact Section -->
+  <section id="contact" class="section fade-in">
+    <h2>Contact</h2>
+    <p>
+      Interested in collaborating or learning more about our research? You can reach us at:
+    </p>
+    <p><strong>Email:</strong> contact@ljmresearchlab.org</p>
+    <p><strong>Address:</strong> Independent Research Lab, New Jersey, USA</p>
+    <p>
+      Or fill out the form below to send us a message:
+    </p>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
   <!-- Footer -->
   <footer>
@@ -109,14 +117,14 @@
   </footer>
 
   <script>
-    // Smooth scrolling and active nav highlight
+    // Smooth scrolling & active nav highlight
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-links a');
 
     window.addEventListener('scroll', () => {
       let current = '';
       sections.forEach(section => {
-        const sectionTop = section.offsetTop - 80;
+        const sectionTop = section.offsetTop - 100;
         if (scrollY >= sectionTop) {
           current = section.getAttribute('id');
         }
