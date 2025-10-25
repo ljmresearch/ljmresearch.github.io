@@ -15,6 +15,7 @@ body {
   color: #e2e8f0;
   line-height: 1.6;
   min-height: 100vh;
+  padding: 2rem 0;
 }
 
 /* Navbar */
@@ -72,15 +73,27 @@ body {
   color: #38bdf8;
 }
 
-/* Hero Section */
+/* Section Boxes */
+.section,
 .hero {
-  text-align: center;
-  padding: 12rem 2rem;
   max-width: 1000px;
   margin: 6rem auto;
+  padding: 3rem 2rem;
   background: rgba(15, 23, 42, 0.95);
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover,
+.hero:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+}
+
+.section h2,
+.hero h1 {
+  text-align: center;
 }
 
 .hero h1 {
@@ -97,28 +110,11 @@ body {
   opacity: 0.9;
 }
 
-/* General Sections */
-.section {
-  max-width: 1000px;
-  scroll-margin-top: 120px; 
-  margin: 6rem auto;
-  padding: 3rem 2rem;
-  background: rgba(15, 23, 42, 0.9);
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.section:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
-}
-
+/* General Section Styling */
 .section h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
   color: #38bdf8;
-  text-align: center;
 }
 
 .section p {
@@ -182,7 +178,7 @@ body {
   margin-bottom: 0.4rem;
 }
 
-/* Contact Section */
+/* Contact Form */
 .contact-form {
   display: flex;
   flex-direction: column;
