@@ -95,6 +95,21 @@
     </div>
     <button class="carousel-btn next">&gt;</button>
   </div>
+    <script>
+        const prevBtn = document.querySelector('.carousel-btn.prev');
+        const nextBtn = document.querySelector('.carousel-btn.next');
+        const carousel = document.querySelector('.pub-carousel');
+
+        const scrollAmount = 240; // pixels to scroll per click (adjust as needed)
+
+        nextBtn.addEventListener('click', () => {
+        carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        });
+
+        prevBtn.addEventListener('click', () => {
+        carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        });
+    </script>
 </section>
 
   <!-- Contact Section -->
