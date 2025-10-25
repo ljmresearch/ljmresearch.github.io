@@ -75,7 +75,7 @@ body {
 /* Hero */
 .hero {
   text-align: center;
-  padding: 8rem 2rem;
+  padding: 10rem 2rem;
 }
 
 .hero h1 {
@@ -95,7 +95,7 @@ body {
 /* Section */
 .section {
   max-width: 1000px;
-  margin: 5rem auto;
+  margin: 8rem auto;
   padding: 0 2rem;
 }
 
@@ -161,8 +161,8 @@ footer {
   background-color: #0f172a;
   color: #94a3b8;
   text-align: center;
-  padding: 1.5rem 0;
-  margin-top: 5rem;
+  padding: 2rem 0;
+  margin-top: 8rem;
   font-size: 0.95rem;
   border-top: 1px solid rgba(255,255,255,0.08);
 }
