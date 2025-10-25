@@ -7,35 +7,83 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="navbar">
-    <a href="index.html" class="nav-logo">
-      <img src="images/logo.jpg" alt="LJM Research Lab Logo">
-      LJM Research Laboratory
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="publications.html">Publications</a></li>
-    </ul>
-  </nav>
+  <!-- Header / Navbar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <img src="images/logo.jpg" alt="LJM Research Lab Logo" />
+        <span>LJM Research Laboratory</span>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#mission">Mission</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  <section class="hero">
-    <h1>Exploring the Foundations of Intelligent Technology</h1>
-    <p>
-      LJM Research Laboratory is an independent research Initiative dedicated to advancing artificial intelligence for the benefit of medicine, education, and humanity. We focus on developing new architectures, exploring theoretical foundations, and creating open tools to accelerate scientific progress.
-    </p>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Inventing the Foundations of Intelligent Technology</h1>
+      <p>
+        LJM Research Laboratory is an independent research initiative exploring the future of artificial intelligence — advancing new architectures, learning frameworks, and real-world applications in medicine, education, and beyond.
+      </p>
+    </div>
   </section>
 
-  <section class="section">
+  <!-- Projects Section -->
+  <section id="projects" class="section fade-in">
+    <h2>Projects</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>AI for Medicine</h3>
+        <p>
+          Researching interpretable deep learning models to assist clinicians in diagnostics, while ensuring transparency, ethics, and accessibility in healthcare AI.
+        </p>
+      </div>
+      <div class="card">
+        <h3>AI in Education</h3>
+        <p>
+          Developing adaptive learning systems that personalize educational experiences, helping students learn more effectively through intelligent feedback.
+        </p>
+      </div>
+      <div class="card">
+        <h3>AI Theory and Architecture</h3>
+        <p>
+          Exploring new computational models and hybrid architectures that unify symbolic reasoning and deep learning for generalizable intelligence.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications Section -->
+  <section id="publications" class="section fade-in">
+    <h2>Publications</h2>
+    <div class="pub-list">
+      <div class="pub">
+        <h4></h4>
+        <p></p>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+  <section id="mission" class="section fade-in">
     <h2>Mission</h2>
     <p>
-      Our mission is to invent, explore, and refine AI technologies that expand human capability and understanding—building a bridge between computational intelligence and real-world impact.
+      Our mission is to explore the foundations of machine intelligence and apply those insights to improve the human condition.  
+      We aim to advance open research, create transparent systems, and design AI that serves humanity — ethically, safely, and creatively.
     </p>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>© 2025 LJM Research Laboratory. Independent research for the advancement of AI.</p>
+    <p>© 2025 LJM Research Laboratory · Independent AI Research Initiative</p>
   </footer>
 </body>
 </html>
