@@ -73,9 +73,10 @@ body {
 }
 
 /* Hero */
+/* Hero */
 .hero {
   text-align: center;
-  padding: 10rem 2rem;
+  padding: 12rem 2rem; /* increased top/bottom padding */
 }
 
 .hero h1 {
@@ -95,7 +96,7 @@ body {
 /* Section */
 .section {
   max-width: 1000px;
-  margin: 8rem auto;
+  margin: 16rem auto; /* double vertical spacing between sections */
   padding: 0 2rem;
 }
 
@@ -161,8 +162,8 @@ footer {
   background-color: #0f172a;
   color: #94a3b8;
   text-align: center;
-  padding: 2rem 0;
-  margin-top: 8rem;
+  padding: 3rem 0; /* more padding for separation */
+  margin-top: 16rem; /* double spacing before footer */
   font-size: 0.95rem;
   border-top: 1px solid rgba(255,255,255,0.08);
 }
