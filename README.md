@@ -1,1 +1,0 @@
-# ljmresearch.github.io
