@@ -11,7 +11,7 @@ html {
 
 body {
   font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
-  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+  background: #ADD8E6;
   color: #e2e8f0;
   line-height: 1.6;
   min-height: 100vh;
