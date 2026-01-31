@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --nav-height: 80px; /* adjust if needed */
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -83,6 +87,10 @@ body {
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section {
+  scroll-margin-top: calc(50vh - var(--nav-height));
 }
 
 .section:hover,
