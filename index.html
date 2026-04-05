@@ -1,122 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LJM Research Laboratory</title>
-
-<link rel="stylesheet" href="styles.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LJM Research Laboratory</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<header class="navbar">
-  <div class="container nav-container">
-    <div class="nav-logo">
-      <img src="images/logo.jpg" alt="Logo">
-      <span>LJM Research Laboratory</span>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <div class="nav-logo">
+        <img src="images/logo.jpg" alt="Logo">
+        <span>LJM Research Laboratory</span>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#mission">Mission</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#mission">Mission</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Inventing the Foundations of Intelligent Technology</h1>
+      <p>
+        LJM Research Laboratory is an independent research initiative exploring the future
+        of artificial intelligence — advancing new architectures, learning frameworks,
+        and real-world applications in medicine, education, and beyond.
+      </p>
+    </div>
+  </section>
 
-<section class="hero">
-  <div class="container">
-    <h1>Inventing the Foundations of Intelligent Technology</h1>
-    <p>
-      LJM Research Laboratory is an independent research initiative exploring the future
-      of artificial intelligence — advancing new architectures, learning frameworks,
-      and real-world applications in medicine, education, and beyond.
-    </p>
-  </div>
-</section>
-
-<section id="mission" class="section">
-  <div class="container">
+  <!-- Mission Section -->
+  <section id="mission" class="section">
     <h2>Mission</h2>
     <p>
       Our mission is to explore the foundations of machine intelligence and apply
-      those insights to improve the human condition. We aim to advance open research,
-      create transparent systems, and design AI that serves humanity ethically,
-      safely, and creatively.
+      those insights to improve the human condition. We advance open research, build
+      transparent systems, and design AI that serves humanity ethically, safely, and creatively.
     </p>
-  </div>
-</section>
+  </section>
 
-<section id="projects" class="section">
-  <div class="container">
+  <!-- Projects Section -->
+  <section id="projects" class="section">
     <h2>Projects</h2>
-
     <div class="cards">
       <div class="card">
         <h3>AI for Medicine</h3>
-        <p>Interpretable deep learning models for clinical decision support.</p>
+        <p>Interpretable deep learning models to assist clinicians in diagnostics while ensuring transparency and ethical safeguards.</p>
       </div>
-
       <div class="card">
         <h3>AI in Education</h3>
-        <p>Adaptive learning systems for personalized student instruction.</p>
+        <p>Adaptive learning systems that personalize instruction and provide intelligent feedback to improve student outcomes.</p>
       </div>
-
       <div class="card">
         <h3>AI Theory & Architecture</h3>
-        <p>Hybrid symbolic and deep learning research for general intelligence.</p>
+        <p>New computational models that unify symbolic reasoning and deep learning for more generalizable intelligence.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="publications" class="section">
-  <div class="container">
+  <!-- Publications Section -->
+  <section id="publications" class="section">
     <h2>Publications</h2>
-
-    <div class="cards">
-      <div class="card">
-        <h3>Coming Soon</h3>
-        <p>Research paper in preparation.</p>
+    <div class="cards-carousel">
+      <button class="carousel-btn left">&#10094;</button>
+      <div class="cards-wrapper">
+        <div class="cards">
+          <div class="card">
+            <h3>Coming Soon</h3>
+            <p>Research paper in preparation.</p>
+          </div>
+          <div class="card">
+            <h3>Coming Soon</h3>
+            <p>Research paper in preparation.</p>
+          </div>
+          <div class="card">
+            <h3>Coming Soon</h3>
+            <p>Research paper in preparation.</p>
+          </div>
+        </div>
       </div>
-
-      <div class="card">
-        <h3>Coming Soon</h3>
-        <p>Research paper in preparation.</p>
-      </div>
-
-      <div class="card">
-        <h3>Coming Soon</h3>
-        <p>Research paper in preparation.</p>
-      </div>
+      <button class="carousel-btn right">&#10095;</button>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="contact" class="section">
-  <div class="container">
+  <!-- Contact Section -->
+  <section id="contact" class="section">
     <h2>Contact</h2>
-
-    <p>Email: contact@ljmresearchlab.org</p>
-
+    <p>Email: <a href="mailto:contact@ljmresearchlab.org">contact@ljmresearchlab.org</a></p>
     <form class="contact-form">
       <input type="text" placeholder="Your Name" required>
       <input type="email" placeholder="Your Email" required>
       <textarea placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
-  </div>
-</section>
+  </section>
 
-<footer>
-  © 2026 LJM Research Laboratory · Independent AI Research Initiative
-</footer>
+  <!-- Footer -->
+  <footer>
+    © 2025 LJM Research Laboratory · Independent AI Research Initiative
+  </footer>
+
+  <!-- Carousel & Smooth Centering Script -->
+  <script>
+    // Carousel
+    const leftBtn = document.querySelector(".carousel-btn.left");
+    const rightBtn = document.querySelector(".carousel-btn.right");
+    const carouselCards = document.querySelector(".cards-wrapper .cards");
+    let scrollPosition = 0;
+
+    leftBtn.addEventListener("click", () => {
+      scrollPosition -= 300;
+      if(scrollPosition < 0) scrollPosition = 0;
+      carouselCards.style.transform = `translateX(-${scrollPosition}px)`;
+    });
+
+    rightBtn.addEventListener("click", () => {
+      scrollPosition += 300;
+      const maxScroll = carouselCards.scrollWidth - carouselCards.parentElement.offsetWidth;
+      if(scrollPosition > maxScroll) scrollPosition = maxScroll;
+      carouselCards.style.transform = `translateX(-${scrollPosition}px)`;
+    });
+
+    // Smooth Centering for Sections
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const navbarHeight = document.querySelector('.navbar').offsetHeight;
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+
+        const sectionTop = targetSection.getBoundingClientRect().top + window.scrollY;
+        const scrollY = sectionTop - (window.innerHeight / 2) + (targetSection.offsetHeight / 2) - (navbarHeight / 2);
+
+        window.scrollTo({ top: scrollY, behavior: 'smooth' });
+      });
+    });
+  </script>
 
 </body>
 </html>
-
