@@ -1,160 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LJM Research Laboratory</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LJM Research Laboratory</title>
+
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <!-- Header / Navbar -->
-  <header class="navbar">
-    <div class="nav-container">
-      <a href="#home" class="nav-logo">
-        <img src="images/logo.jpg" alt="LJM Research Lab Logo" />
-        <span>LJM Research Laboratory</span>
-      </a>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#mission">Mission</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#publications">Publications</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <h1>Inventing the Foundations of Intelligent Technology</h1>
-      <p>
-        LJM Research Laboratory is an independent research initiative exploring the future of artificial intelligence — advancing new architectures, learning frameworks, and real-world applications in medicine, education, and beyond.
-      </p>
+<header class="navbar">
+  <div class="container nav-container">
+    <div class="nav-logo">
+      <img src="images/logo.jpg" alt="Logo">
+      <span>LJM Research Laboratory</span>
     </div>
-  </section>
 
-  <!-- Mission Section -->
-  <section id="mission" class="section fade-in">
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#mission">Mission</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>Inventing the Foundations of Intelligent Technology</h1>
+    <p>
+      LJM Research Laboratory is an independent research initiative exploring the future
+      of artificial intelligence — advancing new architectures, learning frameworks,
+      and real-world applications in medicine, education, and beyond.
+    </p>
+  </div>
+</section>
+
+<section id="mission" class="section">
+  <div class="container">
     <h2>Mission</h2>
     <p>
-      Our mission is to explore the foundations of machine intelligence and apply those insights to improve the human condition.  
-      We aim to advance open research, create transparent systems, and design AI that serves humanity — ethically, safely, and creatively.
+      Our mission is to explore the foundations of machine intelligence and apply
+      those insights to improve the human condition. We aim to advance open research,
+      create transparent systems, and design AI that serves humanity ethically,
+      safely, and creatively.
     </p>
-  </section>
+  </div>
+</section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="section fade-in">
+<section id="projects" class="section">
+  <div class="container">
     <h2>Projects</h2>
+
     <div class="cards">
       <div class="card">
         <h3>AI for Medicine</h3>
-        <p>
-          Researching interpretable deep learning models to assist clinicians in diagnostics, while ensuring transparency, ethics, and accessibility in healthcare AI.
-        </p>
+        <p>Interpretable deep learning models for clinical decision support.</p>
       </div>
+
       <div class="card">
         <h3>AI in Education</h3>
-        <p>
-          Developing adaptive learning systems that personalize educational experiences, helping students learn more effectively through intelligent feedback.
-        </p>
+        <p>Adaptive learning systems for personalized student instruction.</p>
       </div>
+
       <div class="card">
-        <h3>AI Theory and Architecture</h3>
-        <p>
-          Exploring new computational models and hybrid architectures that unify symbolic reasoning and deep learning for generalizable intelligence.
-        </p>
+        <h3>AI Theory & Architecture</h3>
+        <p>Hybrid symbolic and deep learning research for general intelligence.</p>
       </div>
     </div>
-  </section>
-
-  <!-- Publications Section -->
- <section id="publications" class="section fade-in">
-  <h2>Publications</h2>
-  <div class="pub-carousel-container">
-    <button class="carousel-btn prev">&lt;</button>
-    <div class="pub-carousel">
-      <div class="pub-card">
-        <h4>TBD</h4>
-        <p></p>
-      </div>
-      <div class="pub-card">
-        <h4>TBD</h4>
-        <p></p>
-      </div>
-      <div class="pub-card">
-        <h4>TBD</h4>
-        <p></p>
-      </div>
-      <div class="pub-card">
-        <h4>TBD</h4>
-        <p></p>
-      </div>
-      <!-- Add more publication cards here -->
-    </div>
-    <button class="carousel-btn next">&gt;</button>
   </div>
-    <script>
-        const prevBtn = document.querySelector('.carousel-btn.prev');
-        const nextBtn = document.querySelector('.carousel-btn.next');
-        const carousel = document.querySelector('.pub-carousel');
-
-        const scrollAmount = 240; // pixels to scroll per click (adjust as needed)
-
-        nextBtn.addEventListener('click', () => {
-        carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-        });
-
-        prevBtn.addEventListener('click', () => {
-        carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-        });
-    </script>
 </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section fade-in">
+<section id="publications" class="section">
+  <div class="container">
+    <h2>Publications</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Coming Soon</h3>
+        <p>Research paper in preparation.</p>
+      </div>
+
+      <div class="card">
+        <h3>Coming Soon</h3>
+        <p>Research paper in preparation.</p>
+      </div>
+
+      <div class="card">
+        <h3>Coming Soon</h3>
+        <p>Research paper in preparation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="container">
     <h2>Contact</h2>
-    <p>
-      Interested in collaborating or learning more about our research? You can reach us at:
-    </p>
-    <p><strong>Email:</strong> contact@ljmresearchlab.org</p>
-    <p>
-      Or fill out the form below to send us a message:
-    </p>
+
+    <p>Email: contact@ljmresearchlab.org</p>
+
     <form class="contact-form">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
       <textarea placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
-  </section>
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 LJM Research Laboratory · Independent AI Research Initiative</p>
-  </footer>
+<footer>
+  © 2026 LJM Research Laboratory · Independent AI Research Initiative
+</footer>
 
-  <script>
-    // Smooth scrolling & active nav highlight
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-links a');
-
-    window.addEventListener('scroll', () => {
-      let current = '';
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        if (scrollY >= sectionTop) {
-          current = section.getAttribute('id');
-        }
-      });
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === '#' + current) {
-          link.classList.add('active');
-        }
-      });
-    });
-  </script>
 </body>
 </html>
+
