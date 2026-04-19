@@ -1,152 +1,678 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LJM Research Laboratory</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="An independent research lab created by a computer science teacher to explore new technology, publish honest findings, and build software." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="container nav-container">
-      <div class="nav-logo">
-        <img src="images/logo.jpg" alt="Logo">
-        <span>LJM Research Laboratory</span>
-      </div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#mission">Mission</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#publications">Publications</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+  <!-- ============================================================
+       NAVBAR
+       ============================================================ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a class="nav-logo" onclick="navigate('home')">
+        <img src="images/Logo.PNG" alt="Logo" class="nav-logo-img">
+        <div class="nav-logo-text">
+          <div class="nav-logo-name">LJM Research</div>
+          <div class="nav-logo-sub">LABORATORY</div>
+        </div>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a class="nav-link" data-page="home"         onclick="navigate('home')">Home</a></li>
+        <li><a class="nav-link" data-page="products"     onclick="navigate('products')">Products</a></li>
+        <li><a class="nav-link" data-page="research"     onclick="navigate('research')">Research</a></li>
+        <li><a class="nav-link" data-page="about"        onclick="navigate('about')">About</a></li>
+        <li><a class="nav-link" data-page="contact"      onclick="navigate('contact')">Contact</a></li>
+      </ul>
     </div>
-  </header>
+  </nav>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Inventing the Foundations of Intelligent Technology</h1>
-      <p>
-        LJM Research Laboratory is an independent research initiative exploring the future
-        of artificial intelligence — advancing new architectures, learning frameworks,
-        and real-world applications in medicine, education, and beyond.
-      </p>
-    </div>
-  </section>
+  <!-- ============================================================
+       PAGES
+       ============================================================ -->
+  <main class="page-content">
 
-  <!-- Mission Section -->
-  <section id="mission" class="section">
-    <h2>Mission</h2>
-    <p>
-      Our mission is to explore the foundations of machine intelligence and apply
-      those insights to improve the human condition. We advance open research, build
-      transparent systems, and design AI that serves humanity ethically, safely, and creatively.
-    </p>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>AI for Medicine</h3>
-        <p>Interpretable deep learning models to assist clinicians in diagnostics while ensuring transparency and ethical safeguards.</p>
-      </div>
-      <div class="card">
-        <h3>AI in Education</h3>
-        <p>Adaptive learning systems that personalize instruction and provide intelligent feedback to improve student outcomes.</p>
-      </div>
-      <div class="card">
-        <h3>AI Theory & Architecture</h3>
-        <p>New computational models that unify symbolic reasoning and deep learning for more generalizable intelligence.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Publications Section -->
-  <section id="publications" class="section">
-    <h2>Publications</h2>
-    <div class="cards-carousel">
-      <button class="carousel-btn left">&#10094;</button>
-      <div class="cards-wrapper">
-        <div class="cards">
-          <div class="card">
-            <h3>Coming Soon</h3>
-            <p>Research paper in preparation.</p>
+    <!-- ======================================================
+         HOME
+         ====================================================== -->
+    <section class="page" id="page-home">
+      <div class="home-hero">
+        <div></div>
+        <div class="hero-glow-1"></div>
+        <div class="hero-glow-2"></div>
+        <div class="hero-inner">
+          <div class="hero-pill">
+            <div class="hero-dot"></div>
+            Research &amp; Software by a CS Grad and Educator
           </div>
-          <div class="card">
-            <h3>Coming Soon</h3>
-            <p>Research paper in preparation.</p>
+
+          <img src="images/Logo.PNG" alt="Logo" class="hero-logo">
+
+          <h1 class="hero-title">
+            LJM Research <span>Laboratory</span>
+          </h1>
+          <p class="hero-subtitle">
+            LJM Research Laboratory is an independent research initiative exploring the future
+            of artificial intelligence — to explore new technology, publish honest findings, 
+            advance real-world applications in medicine, education, and beyond and build 
+            software that puts ideas into practice.
+          </p>
+          <div class="hero-buttons">
+            <button class="btn btn-primary" onclick="navigate('products')">📦 View Products</button>
+            <button class="btn btn-outline" onclick="navigate('about')">About the Lab →</button>
           </div>
-          <div class="card">
-            <h3>Coming Soon</h3>
-            <p>Research paper in preparation.</p>
+        </div>
+        <div class="hero-scroll">↓</div>
+      </div>
+
+      <div class="mission-strip">
+        <p>
+          Started by a Techie who believes that good research
+          doesn't have to come from a university, just from someone willing to dig in, test things honestly,
+          and share what they find.
+        </p>
+      </div>
+
+      <section class="focus-section">
+        <div class="container" style="text-align:center">
+          <div class="section-eyebrow">💡 Focus Areas</div>
+          <h2 class="section-title">What the Lab Does</h2>
+          <p class="section-subtitle" style="margin:0 auto">
+            The work spans research, writing, and software, all connected by a genuine curiosity about
+            where Technology and Artifical Intelligence is headed and how it actually works in practice.
+          </p>
+          <div class="focus-grid">
+            <div class="focus-card">
+              <div class="focus-icon">🚀</div>
+              <h3>Emerging Technology</h3>
+              <p>Exploring new tools, frameworks, and ideas at the leading edge of computer science, and writing up what actually works.</p>
+            </div>
+            <div class="focus-card">
+              <div class="focus-icon">🤖</div>
+              <h3>Machine Learning &amp; AI</h3>
+              <p>Hands-on research into machine learning methods, with an eye toward practical application and honest assessment of limitations.</p>
+            </div>
+            <div class="focus-card">
+              <div class="focus-icon">🛠️</div>
+              <h3>Software Development</h3>
+              <p>Building tools and products that put research ideas into practice, designed to be useful to real people, not just working in demos.</p>
+            </div>
+            <div class="focus-card">
+              <div class="focus-icon">📚</div>
+              <h3>Tech Education</h3>
+              <p>Sharing what I learn in ways that are accessible, clear, and useful, informed by years of computer science education and teaching methods.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="teasers-section">
+        <div class="container">
+          <div class="products-preview-header">
+            <div>
+              <div class="section-eyebrow">🔬 Ongoing Research</div>
+            </div>
+          </div>
+          <div class="teasers-grid">
+            <div class="teaser-card">
+              <div class="teaser-icon-wrap">📖</div>
+              <h3>Publications</h3>
+              <p>Active research projects covering machine learning, emerging technologies, 
+                and computational methods. Findings, write-ups, and technical articles will 
+                be published here as work is completed. Honest, accessible writing — not just 
+                for academics.</p>
+              <span class="text-link" onclick="navigate('research')">View Research →</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="products-preview-section">
+        <div class="container">
+          <div class="products-preview-header">
+            <div>
+              <div class="section-eyebrow">💻 Software</div>
+              <h2 class="section-title" style="margin-bottom:0">Products</h2>
+            </div>
+            <span class="text-link" onclick="navigate('products')">See All Products →</span>
+          </div>
+          <div class="preview-grid">
+            <div class="preview-card">
+              <div class="preview-card-icon">📊</div>
+              <div class="preview-card-header">
+                <h3>Coming Soon </h3>
+                <span class="badge badge-sky">In Development</span>
+              </div>
+              <p>TBD </p>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      <div class="home-cta">
+        <div class="home-cta-icon">🧪</div>
+        <h2>Let's Talk Tech</h2>
+        <p>
+          Interested in the research, have feedback on a product, or just want to talk about something
+          you're building or exploring? I'm always happy to connect.
+        </p>
+        <button class="btn btn-primary" onclick="navigate('contact')">Get in Touch →</button>
+      </div>
+
+    </section><!-- /home -->
+
+
+    <!-- ======================================================
+         PRODUCTS
+         ====================================================== -->
+    <section class="page" id="page-products">
+
+      <div class="page-hero">
+        <h1>Products</h1>
+        <p>Software tools built from the research, designed to be useful to real people, not just working in demos.</p>
+      </div>
+
+      <div class="products-section">
+        <div class="container--narrow">
+
+          <div class="products-values">
+            <span class="value-chip">🔬 Research-grounded</span>
+            <span class="value-chip">👷 Practitioner-first</span>
+            <span class="value-chip">📖 Well-documented</span>
+            <span class="value-chip">🔍 Honest about limits</span>
+            <span class="value-chip">🌐 Open &amp; accessible</span>
+          </div>
+
+          <!-- DataLens -->
+          <div class="product-card">
+            <div class="product-card-left">
+              <div class="product-header">
+                <div class="product-icon">📊</div>
+                <h2>Future Products </h2>
+                <span class="badge badge-sky">In Development</span>
+              </div>
+              <p class="product-desc">
+                TBD
+              </p>
+              <div class="product-features">
+                <span class="feature-tag">TBD</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CausalKit 
+          <div class="product-card">
+            <div class="product-card-left">
+              <div class="product-header">
+                <div class="product-icon">🔗</div>
+                <h2>CausalKit</h2>
+                <span class="badge badge-slate">Coming Soon</span>
+              </div>
+              <p class="product-desc">
+                CausalKit is a Python library that brings practical causal inference methods to data
+                scientists and analysts. It provides clean, well-documented implementations of DAG
+                construction, do-calculus, and counterfactual estimation — without requiring a
+                statistics PhD to use correctly.
+              </p>
+              <div class="product-features">
+                <span class="feature-tag">DAG construction</span>
+                <span class="feature-tag">Do-calculus</span>
+                <span class="feature-tag">Counterfactual estimation</span>
+                <span class="feature-tag">Pandas-native API</span>
+                <span class="feature-tag">Visualization tools</span>
+              </div>
+            </div>
+            <div class="product-card-right">
+              <span class="product-cat">Python Library</span>
+              <button class="btn btn-disabled" disabled>Not Available Yet</button>
+            </div>
+          </div>
+          -->
+
+          <!-- ModelScope
+          <div class="product-card">
+            <div class="product-card-left">
+              <div class="product-header">
+                <div class="product-icon">🔍</div>
+                <h2>ModelScope</h2>
+                <span class="badge badge-slate">Planned</span>
+              </div>
+              <p class="product-desc">
+                ModelScope is a model auditing and explainability toolkit for machine learning
+                practitioners. It provides tools to inspect model behavior, understand feature
+                importance, identify biases, and generate plain-language explanations of model
+                decisions — making interpretability a first-class concern rather than an afterthought.
+              </p>
+              <div class="product-features">
+                <span class="feature-tag">Feature importance</span>
+                <span class="feature-tag">Bias detection</span>
+                <span class="feature-tag">Prediction explanations</span>
+                <span class="feature-tag">Sklearn-compatible</span>
+                <span class="feature-tag">Audit reports</span>
+              </div>
+            </div>
+            <div class="product-card-right">
+              <span class="product-cat">ML Tools</span>
+              <button class="btn btn-disabled" disabled>Not Available Yet</button>
+            </div>
+          </div> -->
+
+        </div>
+      </div>
+
+    </section><!-- /products -->
+
+
+    <!-- ======================================================
+         RESEARCH
+         ====================================================== -->
+    <section class="page" id="page-research">
+
+      <div class="page-hero">
+        <h1>Research</h1>
+        <p>Independent research/publications into machine learning, AI, emerging technologies, and computational methods.</p>
+      </div>
+
+      <div class="coming-section">
+        <div class="container--tight">
+          <div class="coming-card">
+            <div class="coming-icon">🕐</div>
+            <h2>Research Under Development</h2>
+            <p>
+              Active research is underway. Full project pages, methodology details, and preliminary
+              findings will be published here as work progresses. Sign up to be notified when
+              the first research goes live.
+            </p>
+
+            <div class="coming-topics">
+              <h3>Planned Focus Areas</h3>
+              <div class="coming-topic-item"><div class="topic-dot"></div>Machine Learning &amp; AI systems</div>
+              <div class="coming-topic-item"><div class="topic-dot"></div>Emerging technologies in education</div>
+              <div class="coming-topic-item"><div class="topic-dot"></div>Data science methods for practitioners</div>
+              <div class="coming-topic-item"><div class="topic-dot"></div>Computational approaches to real-world problems</div>
+            </div>
+
+            <div class="coming-topics">
+              <h3>What to Expect</h3>
+              <div class="coming-topic-item"><div class="topic-dot"></div>Technical write-ups from active research projects</div>
+              <div class="coming-topic-item"><div class="topic-dot"></div>Honest assessments of new tools and methods</div>
+              <div class="coming-topic-item"><div class="topic-dot"></div>Practical guides for applying emerging technologies</div>
+              <div class="coming-topic-item"><div class="topic-dot"></div>Notes from experiments that didn't go as planned</div>
+            </div>
+
+            <p style="font-size:.85rem;color:var(--slate-500)">Get notified when research is published:</p>
+            <div class="notify-form" id="researchNotifyForm">
+              <input type="email" id="researchEmail" placeholder="your@email.com" />
+              <button class="btn btn-primary" onclick="handleNotify('research')">Notify Me</button>
+            </div>
+            <div class="notify-success" id="researchSuccess">✓ You're on the list — I'll reach out when research goes live.</div>
           </div>
         </div>
       </div>
-      <button class="carousel-btn right">&#10095;</button>
+
+    </section><!-- /research -->
+
+
+    <!-- ======================================================
+         ABOUT
+         ====================================================== -->
+    <section class="page" id="page-about">
+
+      <div class="page-hero">
+        <div class="about-hero-avatar">LJM</div>
+        <h1>LJM Research Laboratory</h1>
+        <p>A solo research practice run by a NJ Educator with a passion for exploring, building, and publishing work on new technology.</p>
+      </div>
+
+      <div class="about-section">
+        <div class="container">
+          <div class="about-inner">
+
+            <div class="about-card">
+              <div class="about-card-title"><span class="icon-sm">💡</span> About</div>
+              <p>
+                LJM Research Laboratory was created by a NJ Educator with a B.S. in Computer
+                Science who wanted a dedicated space to research, experiment with, and publish findings on
+                new and emerging technologies, outside of the traditional academic track.
+              </p>
+              <p>
+                By day, I am a teacher dedicated to educating students and helping them understand how 
+                the world works. The lab is the natural extension of that curiosity, a place to go deeper, 
+                ask harder questions, and share what I find with anyone who is interested.
+              </p>
+              <p>
+                The goal is straightforward: stay close to the leading edge of technology, do honest
+                independent research, build software that solves real problems, and publish everything
+                in a way that is accessible and useful for everyone, not locked behind paywalls or institutional gatekeeping.
+              </p>
+            </div>
+
+            <div class="two-col">
+              <div class="about-card">
+                <div class="about-card-title"><span class="icon-sm">📚</span> Teaching</div>
+                <p>
+                  I educate, bringing real-world context and current technology into the classroom.
+                  Teaching keeps me honest, if I can't explain something clearly, I probably don't understand
+                  it well enough yet.
+                </p>
+              </div>
+              <div class="about-card">
+                <div class="about-card-title"><span class="icon-sm">💻</span> Research &amp; Software</div>
+                <p>
+                  The lab is where I go deep on topics that interest me, testing new tools, writing up
+                  findings, and building small software products that put ideas into practice.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <h2 style="font-size:1.3rem;font-weight:700;color:var(--slate-900);margin-bottom:1rem;display:flex;align-items:center;gap:.5rem">
+                <span>🎓</span> Areas of Interest
+              </h2>
+              <div class="interests-wrap">
+                <span class="interest-chip">Machine Learning &amp; AI</span>
+                <span class="interest-chip">Emerging Technologies</span>
+                <span class="interest-chip">Data Science</span>
+                <span class="interest-chip">Software Development</span>
+                <span class="interest-chip">Tech Education</span>
+                <span class="interest-chip">Computational Methods</span>
+              </div>
+            </div>
+
+            <div class="about-card">
+              <div class="about-card-title"><span class="icon-sm">💻</span> Software</div>
+              <p>
+                Alongside research, I build software tools that put ideas into practice. Products are designed
+                to be useful to real people, not just proofs of concept, with a focus on simplicity, clarity,
+                and honest documentation of what the tool can and cannot do.
+              </p>
+              <span class="text-link" onclick="navigate('products')">View Current Products →</span>
+            </div>
+
+            <div>
+              <h2 style="font-size:1.3rem;font-weight:700;color:var(--slate-900);margin-bottom:1.5rem">Background</h2>
+              <div class="timeline">
+                
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-year">Present</div>
+                  <div class="timeline-event">Working as a NJ Educator, sharing knowledge with the next generation of students.</div>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-year">2025</div>
+                  <div class="timeline-event">Founded LJM Research Laboratory to pursue independent research and publish work on new and emerging technologies.</div>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-year">Pre 2025</div>
+                  <div class="timeline-event">Graduated with a B.S. in Computer Science, building a foundation in Artifical Intelligence, Machine Learning, Deep Learning,
+                  AI algorithms, and computational thinking.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-contact-strip">
+              <h3>Want to connect?</h3>
+              <p>I'm open to conversations about research topics, collaborations, feedback on my work, or anything tech-related.</p>
+              <div class="about-contact-btns">
+                <a class="btn btn-primary" href="mailto:info@ljmresearchlab.org">✉ contact@ljmresearchlab.org</a>
+                <button class="btn btn-outline" onclick="navigate('contact')">Contact Form</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /about -->
+
+
+    <!-- ======================================================
+         CONTACT
+         ====================================================== -->
+    <section class="page" id="page-contact">
+
+      <div class="page-hero">
+        <h1>Get in Touch</h1>
+        <p>Have a question about the research, feedback on a product, or just want to connect? I'd love to hear from you.</p>
+      </div>
+
+      <div class="contact-section">
+        <div class="container--narrow">
+          <div class="contact-grid">
+
+            <!-- Info column -->
+            <div>
+              <div class="contact-info-title">Contact</div>
+              <div class="contact-info-text">
+                This is a solo independent research practice. I read every message personally
+                and respond as quickly as I can.
+              </div>
+
+              <div class="contact-email-card">
+                <div class="contact-email-icon">✉</div>
+                <div>
+                  <div class="contact-email-label">Email</div>
+                  <a class="contact-email-link" href="mailto:contact@ljmresearchlab.org">contact@ljmresearchlab.org</a>
+                </div>
+              </div>
+
+              <div class="contact-reasons">
+                <div class="contact-reasons-title">💬 Good reasons to reach out</div>
+                <ul>
+                  <li>Research questions or feedback</li>
+                  <li>Product feedback or ideas</li>
+                  <li>Collaboration or consulting</li>
+                  <li>Just want to talk tech</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Form column -->
+            <div class="contact-form-card">
+              <div id="contactFormWrap">
+                <h2>Send a Message</h2>
+                <form onsubmit="handleContactSubmit(event)">
+                  <div class="form-row">
+                    <div>
+                      <label class="form-label" for="contactName">Name *</label>
+                      <input class="form-input" id="contactName" type="text" placeholder="Your name" required />
+                    </div>
+                    <div>
+                      <label class="form-label" for="contactEmail">Email *</label>
+                      <input class="form-input" id="contactEmail" type="email" placeholder="you@example.com" required />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="contactMessage">Message *</label>
+                    <textarea class="form-textarea" id="contactMessage" placeholder="What's on your mind?" required></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary">✉ Send Message</button>
+                </form>
+              </div>
+
+              <div class="form-success" id="contactSuccess">
+                <div class="form-success-icon">✅</div>
+                <h3>Message Sent!</h3>
+                <p>Thanks for reaching out — I'll get back to you as soon as I can.</p>
+                <button class="btn btn-dark" onclick="resetContactForm()">Send Another Message</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /contact -->
+
+  </main><!-- /page-content -->
+
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-name">LJM Research Laboratory</div>
+          <div class="footer-brand-sub">INDEPENDENT RESEARCH &amp; SOFTWARE</div>
+          <div class="footer-desc">
+            An independent research practice dedicated to exploring new technology,
+            publishing honest findings, and building software that puts ideas into practice.
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <a class="footer-link" onclick="navigate('home')">Home</a>
+          <a class="footer-link" onclick="navigate('products')">Products</a>
+          <a class="footer-link" onclick="navigate('research')">Research</a>
+          <a class="footer-link" onclick="navigate('about')">About</a>
+          <a class="footer-link" onclick="navigate('contact')">Contact</a>
+        </div>
+        <div>
+          <div class="footer-col-title">Contact</div>
+          <a class="footer-link" href="mailto:contact@ljmresearchlab.org">
+            Email
+          </a>
+          <a class="footer-link" href="https://github.com/ljmresearch" target="_blank">
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> LJM Research Laboratory. All rights reserved.</span>
+        <span>Independent Research &amp; Software</span>
+      </div>
     </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:contact@ljmresearchlab.org">contact@ljmresearchlab.org</a></p>
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    © 2025 LJM Research Laboratory · Independent AI Research Initiative
   </footer>
 
-  <!-- Carousel & Smooth Centering Script -->
+
+  <!-- ============================================================
+       JAVASCRIPT
+       ============================================================ -->
   <script>
-    // Carousel
-    const leftBtn = document.querySelector(".carousel-btn.left");
-    const rightBtn = document.querySelector(".carousel-btn.right");
-    const carouselCards = document.querySelector(".cards-wrapper .cards");
-    let scrollPosition = 0;
+    /* ── Current page ── */
+    var currentPage = 'home';
 
-    leftBtn.addEventListener("click", () => {
-      scrollPosition -= 300;
-      if(scrollPosition < 0) scrollPosition = 0;
-      carouselCards.style.transform = `translateX(-${scrollPosition}px)`;
-    });
+    /* ── Navigate to a page ── */
+    function navigate(page) {
+      var pages = document.querySelectorAll('.page');
+      pages.forEach(function(p) { p.classList.remove('active'); });
 
-    rightBtn.addEventListener("click", () => {
-      scrollPosition += 300;
-      const maxScroll = carouselCards.scrollWidth - carouselCards.parentElement.offsetWidth;
-      if(scrollPosition > maxScroll) scrollPosition = maxScroll;
-      carouselCards.style.transform = `translateX(-${scrollPosition}px)`;
-    });
+      var target = document.getElementById('page-' + page);
+      if (target) {
+        target.classList.add('active');
+        currentPage = page;
+      } else {
+        document.getElementById('page-home').classList.add('active');
+        currentPage = 'home';
+      }
 
-    // Smooth Centering for Sections
-    const navLinks = document.querySelectorAll('.nav-links a');
-    const navbarHeight = document.querySelector('.navbar').offsetHeight;
+      updateNavLinks(currentPage);
+      closeMenu();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      history.pushState({ page: page }, '', '#' + page);
+    }
 
-    navLinks.forEach(link => {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        const targetSection = document.getElementById(targetId);
-
-        const sectionTop = targetSection.getBoundingClientRect().top + window.scrollY;
-        const scrollY = sectionTop - (window.innerHeight / 2) + (targetSection.offsetHeight / 2) - (navbarHeight / 2);
-
-        window.scrollTo({ top: scrollY, behavior: 'smooth' });
+    /* ── Highlight active nav link ── */
+    function updateNavLinks(page) {
+      var links = document.querySelectorAll('.nav-link');
+      links.forEach(function(link) {
+        if (link.dataset.page === page) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
       });
+    }
+
+    /* ── Mobile menu ── */
+    function toggleMenu() {
+      var links = document.getElementById('navLinks');
+      var toggle = document.getElementById('navToggle');
+      var open = links.classList.toggle('open');
+      toggle.textContent = open ? '✕' : '☰';
+    }
+
+    function closeMenu() {
+      document.getElementById('navLinks').classList.remove('open');
+      document.getElementById('navToggle').textContent = '☰';
+    }
+
+    /* ── Navbar scroll shadow ── */
+    window.addEventListener('scroll', function() {
+      var navbar = document.getElementById('navbar');
+      if (window.scrollY > 10) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
     });
+
+    /* ── Handle browser back/forward ── */
+    window.addEventListener('popstate', function(e) {
+      var page = (e.state && e.state.page) ? e.state.page : 'home';
+      navigate(page);
+    });
+
+    /* ── Notify Me (Research / Publications) ── */
+    function handleNotify(which) {
+      var form, success;
+      if (which === 'research') {
+        form    = document.getElementById('researchNotifyForm');
+        success = document.getElementById('researchSuccess');
+      } else {
+        form    = document.getElementById('pubsNotifyForm');
+        success = document.getElementById('pubsSuccess');
+      }
+      form.style.display    = 'none';
+      success.style.display = 'block';
+    }
+
+    /* ── Contact form submit ── */
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      document.getElementById('contactFormWrap').style.display = 'none';
+      var successEl = document.getElementById('contactSuccess');
+      successEl.style.display = 'flex';
+    }
+
+    function resetContactForm() {
+      document.getElementById('contactFormWrap').style.display = 'block';
+      document.getElementById('contactSuccess').style.display  = 'none';
+      document.getElementById('contactName').value    = '';
+      document.getElementById('contactEmail').value   = '';
+      document.getElementById('contactMessage').value = '';
+    }
+
+    /* ── Footer year ── */
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    /* ── Initial page load — read hash ── */
+    (function init() {
+      var hash = window.location.hash.replace('#', '') || 'home';
+      var valid = ['home','products','research','publications','about','contact'];
+      var page  = valid.indexOf(hash) !== -1 ? hash : 'home';
+      document.getElementById('page-' + page).classList.add('active');
+      updateNavLinks(page);
+      history.replaceState({ page: page }, '', '#' + page);
+    })();
   </script>
 
 </body>
